@@ -1,0 +1,19 @@
+name: Feature Request or CSV Bank Support
+description: Suggest an improvement, new calculation, or bank CSV format to support.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Explain your workflow or edge case without sharing private financial figures.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested Improvement
+      description: Describe how you would expect this to work in the dashboard.
+    validations:
+      required: false
