@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private Feedback Form (Recommended — No GitHub account required)
+    url: https://thegosset.com/fi/feedback/
+    about: Report a bug, CSV format quirk, or feature idea privately without exposing details publicly.
