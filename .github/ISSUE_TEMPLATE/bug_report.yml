@@ -1,0 +1,65 @@
+name: Public Bug Report
+description: Report a reproducible UI, calculation, or bank CSV parser bug publicly on GitHub.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Privacy reminder:** Never paste Google Sheet URLs, OAuth tokens, bank account numbers, or real account balances in a public GitHub issue. Prefer [the private feedback form](https://thegosset.com/fi/feedback/) if you are unsure.
+  - type: dropdown
+    id: route
+    attributes:
+      label: Affected Page or View
+      options:
+        - /fi/ (Home Overview)
+        - /fi/networth/
+        - /fi/expenses/ (Expenses & CSV Importer)
+        - /fi/cashflow/
+        - /fi/balancesheet/
+        - /fi/retirement/
+        - /fi/savings/
+        - /fi/connection.html
+        - Blog / Main Website
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Portal Mode
+      options:
+        - Demo Mode
+        - Connected Google Sheet
+        - N/A
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Clear description of the bug and what you expected instead.
+      placeholder: Example on Chrome Desktop / iPhone Safari...
+    validations:
+      required: true
+  - type: textarea
+    id: csv_sample
+    attributes:
+      label: Redacted CSV Header + 1 Fake Row (if reporting a CSV import issue)
+      description: Strip merchant details and replace real numbers with dummy values.
+      render: csv
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / Device
+      placeholder: e.g. Chrome 130 macOS, Safari iOS 18
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy_check
+    attributes:
+      label: Privacy Check
+      options:
+        - label: I removed all spreadsheet URLs, account numbers, OAuth tokens, and personal financial balances.
+          required: true
